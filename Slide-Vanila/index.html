@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <style>
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    body{
+        background-color: rgb(184, 184, 184);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic{
+        position: relative;
+        width: 200px; 
+        height: 250px;
+        
+    }
+
+    .pic img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px; 
+        height: 250px;
+        overflow: hidden;
+        object-fit: cover;
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .bullet-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .bullet {
+        background-color: yellow;
+        border-radius:50%;
+        width: 15px; 
+        height: 15px;
+        margin: 10px 5px;
+        cursor: pointer;
+    }
+
+    .active-bullet{
+        background-color: red;
+    }
+    </style>
+    <main>
+
+        <div class="pic">
+            <img src="https://picsum.photos/id/1011/200/300" alt="">
+            <img src="https://picsum.photos/id/1012/200/300" alt="">
+            <img style="opacity: 1;" src="https://picsum.photos/id/1005/200/300" alt="">
+        </div>
+        <div class="bullet-box">
+            <div class="bullet"></div>
+            <div class="bullet"></div>
+            <div class="bullet active-bullet"></div>
+        </div>
+    </main>
+    
+
+
+</body>
+<script>
+
+    var lastIndex = 0;
+    var images = document.querySelectorAll('.pic img');
+
+    // images.forEach((item, index) =>{
+    //     document.querySelectorAll('.bullet')[index].addEventListener('click', () =>{
+    //         let lastImage = document.querySelectorAll('.pic img')[lastIndex];
+    //         let actualImage = document.querySelectorAll('.pic img')[index];
+
+    //         document.querySelectorAll('.bullet')[lastIndex].classList.remove('active-bullet');
+    //         document.querySelectorAll('.bullet')[index].classList.add('active-bullet');
+            
+    //         lastImage.style.opacity = 0;
+    //         actualImage.style.opacity = 1;
+    //         lastIndex = index;
+    //     })
+    
+    // })
+
+    images.forEach((item, index)=>{
+        setInterval( () => {
+            let lastImage = document.querySelectorAll('.pic img')[lastIndex];
+            let actualImage = document.querySelectorAll('.pic img')[index];
+            
+            lastImage.style.opacity = 0;
+            actualImage.style.opacity = 1;
+            lastIndex = index;
+        } ,3000)
+    })
+ 
+    
+// Outra opção automatica 
+
+// var slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+//   setTimeout(showSlides, 3000); // Change image every 2 seconds
+// }
+
+// *****
+
+</script>
+</html>

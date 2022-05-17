@@ -1,0 +1,95 @@
+<!-- 
+    
+    Site com a documentação do API Filmes
+    
+    https://www.themoviedb.org/documentation/api 
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0;box-sizing: border-box;}
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .container{
+            border-bottom: 1px solid #ccc;
+            margin: 20px 80px;
+            padding: 15px 0;
+        }
+
+        .container h2{
+            margin: 10px 0 15px 0;
+        }
+
+        .container .description{
+            margin-bottom: 10px;
+            line-height: 25px;
+            color: #333;
+        }
+
+        .container .date{
+            color: rgb(88, 88, 88);
+            font-size: 14px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <!-- <div class="filme-box">
+                <h2 class="title"></h2>
+                <p class="description"></p>
+                <div class="date"></div>
+            </div> -->
+        </div>
+  
+    </main>
+    
+
+
+</body>
+<script>
+
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1',{
+        method: 'GET',
+    })
+    .then(response => response.json())
+    .then(function(json){
+
+        var container = document.querySelector('.container');
+        var title = document.querySelector('.container .filme-box .title');
+        var description = document.querySelector('.container .filme-box .description');
+        var date = document.querySelector('.container .filme-box .date');
+
+        json.results.map(function(valor){
+
+            container.innerHTML+=`
+            <h2 class="title">`+valor.original_title+`</h2>
+            <p class="description">`+valor.overview+`</p>
+            <p class="date">Lançamento: `+valor.release_date+`<span> | Nota: `+valor.vote_average+`</span></p>`
+
+        })
+
+
+        console.log(json)
+    })
+ 
+
+</script>
+</html>

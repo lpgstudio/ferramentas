@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e1538;
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* cor da borda */
+    background: rgba(0,0,0,0.5);
+
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* Efeito */
+.box::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150%;
+    /* cor dos "traços" */
+    background: linear-gradient(#00ccff,#d400d4);
+    /* defina a velocidade dos traços aumentando ou diminuindo o tempo 
+    (1s = muito rápido ou 10s = mais lento */
+    animation: animate 5s linear infinite;
+}
+
+/* tampão */
+.box::after{
+    content: "";
+    position: absolute;
+    /* controla a espessura do traço */
+    inset: 4px;
+    background-color: #0e1538;
+    /* valor da border-radius - inset = border-radius do .box */
+    border-radius: 11px;
+}
+
+/* faz o traço girar */
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box h2{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 10;
+}

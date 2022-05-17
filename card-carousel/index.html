@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+
+    
+    <title>Card Carousel</title>
+</head>
+<body>
+    <section>
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img class="quote" src="right-quote.svg" alt="ilustração de aspas duplas">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, obcaecati? Quibusdam pariatur error optio ut velit, facere, rem maiores corrupti nobis labore ad minima officiis at temporibus delectus? Aspernatur, ad.</p>
+                        <div class="details">
+                            <div class="imgBox"></div>
+                            <h3>Someone Famous<br><span>Creative Design</span></h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img class="quote" src="right-quote.svg" alt="ilustração de aspas duplas">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, obcaecati? Quibusdam pariatur error optio ut velit, facere, rem maiores corrupti nobis labore ad minima officiis at temporibus delectus? Aspernatur, ad.</p>
+                        <div class="details">
+                            <div class="imgBox"></div>
+                            <h3>Someone Famous<br><span>Creative Design</span></h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonialBox">
+                    <img class="quote" src="right-quote.svg" alt="ilustração de aspas duplas">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, obcaecati? Quibusdam pariatur error optio ut velit, facere, rem maiores corrupti nobis labore ad minima officiis at temporibus delectus? Aspernatur, ad.</p>
+                        <div class="details">
+                            <div class="imgBox"></div>
+                            <h3>Someone Famous<br><span>Creative Design</span></h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+          },
+        //   pagination: {el: ".swiper-pagination",}, // add bolinhas
+        loop: true,
+        });
+      </script>
+</body>
+</html>

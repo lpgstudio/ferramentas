@@ -1,0 +1,44 @@
+<!-- https://www.youtube.com/watch?v=UggYTEgCGHE -->
+
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>CSS3 Transform Effects on Scroll</title>
+</head>
+<body>
+    <section class="bg">
+        <h2>Scroll To Se Magic</h2>
+        <span class="skewedOne"></span>
+        <span class="skewedTwo"></span>
+    </section>
+    <section>
+        <h2>Alson Watch Part 1 and 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique placeat itaque vel, voluptas illo perferendis excepturi, voluptate at unde natus ad veritatis, labore ea quidem dolores sunt pariatur. Aperiam, possimus?
+        Obcaecati natus voluptatem minima autem. Id maiores est quidem, earum unde recusandae ad tempore dicta! Quam pariatur earum voluptate ducimus voluptates commodi quae, repudiandae ea est impedit perspiciatis omnis. Magnam?
+        Minima consectetur tenetur deleniti natus perferendis, voluptates vitae cumque quidem amet dolores? Porro iure, aut quaerat, commodi nam illo laborum ipsa dignissimos molestiae atque voluptatem quas amet, quibusdam voluptatum adipisci.
+        <br><br>
+        Accusamus repudiandae, libero nam optio voluptatem perferendis quisquam aspernatur omnis modi alias, laborum possimus atque exercitationem? Aspernatur nam facilis nesciunt, officiis obcaecati incidunt corporis totam consequuntur! Vero accusamus assumenda non.
+        Impedit iste eius numquam sequi magni, sed aliquid et quam quis eos temporibus aut recusandae repellendus. Dolore sunt modi, facilis ullam quis, dolor fugit nisi tenetur, soluta numquam quia veniam.
+        <br><br>
+        Accusamus repudiandae, libero nam optio voluptatem perferendis quisquam aspernatur omnis modi alias, laborum possimus atque exercitationem? Aspernatur nam facilis nesciunt, officiis obcaecati incidunt corporis totam consequuntur! Vero accusamus assumenda non.
+        Impedit iste eius numquam sequi magni, sed aliquid et quam quis eos temporibus aut recusandae repellendus. Dolore sunt modi, facilis ullam quis, dolor fugit nisi tenetur, soluta numquam quia veniam.</p>
+    </section>
+
+    <script>
+        const SkewedOne = document.querySelector('.skewedOne');
+        const SkewedTwo = document.querySelector('.skewedTwo');
+
+        window.addEventListener('scroll', function() {
+            const value1 = -15 + window.scrollY/35;
+            const value2 = 15 - + window.scrollY/35;
+            SkewedOne.style.transform = "skewY("+value1+"deg)"
+            SkewedTwo.style.transform = "skewY("+value2+"deg)"
+        })
+    </script>
+</body>
+</html>

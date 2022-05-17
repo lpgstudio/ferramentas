@@ -1,0 +1,61 @@
+<!-- https://www.youtube.com/watch?v=WYceq2HGJ84 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Effects for Website</title>
+</head>
+<body>
+    <section>
+        <h2>Parallax Effects for Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dicta quae voluptatibus perferendis ullam quibusdam hic laboriosam natus minima nam, eius tenetur suscipit veniam modi soluta veritatis. Praesentium, quasi expedita?
+        Sapiente rerum hic obcaecati mollitia laudantium in perferendis! Possimus eius sunt aut autem incidunt. Molestiae recusandae architecto at debitis error esse nihil. Exercitationem obcaecati est eos sapiente doloribus sit et!</p>
+    </section>
+    <div class="parallaxBg">
+        <img class="parallaximg1" src="https://picsum.photos/id/1029/900/900" alt="">
+        <h2>Left</h2>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dicta quae voluptatibus perferendis ullam quibusdam hic laboriosam natus minima nam, eius tenetur suscipit veniam modi soluta veritatis. Praesentium, quasi expedita?
+        Sapiente rerum hic obcaecati mollitia laudantium in perferendis! Possimus eius sunt aut autem incidunt. Molestiae recusandae architecto at debitis error esse nihil. Exercitationem obcaecati est eos sapiente doloribus sit et!</p>
+    </section>
+    <div class="parallaxBg">
+        <img class="parallaximg2" src="https://picsum.photos/id/1026/900/900" alt="">
+        <h2>Right</h2>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dicta quae voluptatibus perferendis ullam quibusdam hic laboriosam natus minima nam, eius tenetur suscipit veniam modi soluta veritatis. Praesentium, quasi expedita?
+        Sapiente rerum hic obcaecati mollitia laudantium in perferendis! Possimus eius sunt aut autem incidunt. Molestiae recusandae architecto at debitis error esse nihil. Exercitationem obcaecati est eos sapiente doloribus sit et!</p>
+    </section>
+    <div class="parallaxBg">
+        <img class="parallaximg3" src="https://picsum.photos/id/1048/900/900" alt="">
+        <h2>Top</h2>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dicta quae voluptatibus perferendis ullam quibusdam hic laboriosam natus minima nam, eius tenetur suscipit veniam modi soluta veritatis. Praesentium, quasi expedita?
+        Sapiente rerum hic obcaecati mollitia laudantium in perferendis! Possimus eius sunt aut autem incidunt. Molestiae recusandae architecto at debitis error esse nihil. Exercitationem obcaecati est eos sapiente doloribus sit et!</p>
+    </section>
+    <div class="parallaxBg">
+        <img class="parallaximg4" src="https://picsum.photos/id/1033/900/900" alt="">
+        <h2>Botton</h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <!-- Doc https://simpleparallax.com/ -->
+    <script>
+        var image1 = document.getElementsByClassName('parallaximg1');
+        var image2 = document.getElementsByClassName('parallaximg2');
+        var image3 = document.getElementsByClassName('parallaximg3');
+        var image4 = document.getElementsByClassName('parallaximg4');
+        
+        new simpleParallax(image1 , { orientation: 'left' });
+        new simpleParallax(image2 , { orientation: 'right' });
+        new simpleParallax(image3 , { orientation: 'up' });
+        new simpleParallax(image4 , { orientation: 'down' });
+    </script>
+</body>
+</html>

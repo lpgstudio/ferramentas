@@ -1,0 +1,54 @@
+<!-- https://www.youtube.com/watch?v=WxWtAmZMSPE -->
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Fade On Scroll</title>
+</head>
+
+<body>
+    <div class="header">
+        <div id="bg"></div>
+    </div>
+    <section>
+        <h2>Header Background Fade On Scroll</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum porro velit facilis ullam illum reiciendis,
+            laudantium placeat rem a optio non nihil consequuntur quod amet, dolor accusantium ad similique omnis.
+            Laudantium consequuntur, a eos dolorem laboriosam eius! Officia alias minima repellendus, voluptate
+            similique nostrum, repudiandae ea earum et blanditiis recusandae asperiores excepturi distinctio saepe, ex
+            nesciunt odit vel eum modi.
+            Quisquam consectetur sit eius impedit quos. Nemo modi odit deserunt tempora vel? Quidem esse doloremque
+            obcaecati totam amet deserunt perferendis quia impedit aperiam dignissimos, cumque temporibus nostrum
+            minima? Eveniet, consequuntur!
+            Dolorum amet voluptates laboriosam voluptatum rerum qui nemo, quas magnam architecto nobis voluptatem sequi
+            aspernatur porro ipsum assumenda, quaerat est! Ipsum qui ducimus, explicabo commodi voluptates laboriosam
+            voluptatibus unde voluptate.
+            <br><br>
+            Iusto ea, perferendis optio eos quos accusamus impedit dolores, delectus veniam obcaecati laboriosam
+            dignissimos a, maiores reprehenderit fuga est amet facere! Rerum unde corporis voluptatum odio vero facere
+            dolor placeat.
+            Dolore fugiat adipisci delectus qui dignissimos minus ipsum culpa architecto! Adipisci dolor dicta iure
+            excepturi quo quidem, quibusdam recusandae, laborum, vitae tempora nesciunt? Itaque harum molestias numquam
+            obcaecati nobis culpa!
+            Dolores modi, repellat, delectus velit eos harum quidem quaerat iusto explicabo illo pariatur, id ab natus
+            similique fugiat. Molestiae ut unde esse eius consequatur minima sint consectetur accusamus! Repudiandae,
+            architecto.
+        </p>
+    </section>
+
+    <script>
+        const headerBg = document.getElementById('bg');
+        window.addEventListener('scroll', () => {
+            headerBg.style.top = +window.pageYOffset+'px';
+            headerBg.style.backgroundPositionY = - +window.pageYOffset/2+'px';
+            headerBg.style.opacity = 1 - +window.pageYOffset/550+'';
+        })
+    </script>
+</body>
+
+</html>

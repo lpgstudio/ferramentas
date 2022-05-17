@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <style>
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+
+    <main>
+
+  
+    </main>
+    
+
+
+</body>
+<script>
+
+    //Modelo para Fazer Requisição via AJAX
+
+        /*var request = new XMLHttpRequest();
+        request.open('GET','http://jsonplaceholder.typicode.com/todos/1',true);
+
+        request.onload = function(){
+            if(this.status >= 200 && this.status < 400){
+                //deu certo
+                var data = JSON.parse(this.response);
+                console.log(data);
+            }else {
+                //erro...
+            }
+        }
+
+        request.onerror = function(){
+
+        }
+
+
+        request.send();
+        */
+
+    //Modelo para Fazer Requisição via AJAX com FETCH
+
+        fetch('http://jsonplaceholder.typicode.com/posts',{
+            //essa parte é para o method post, para o get não precisa!
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'LP Code',
+                body: 'Meu Conteudo',
+                userID: 10
+            }),
+            headers:{
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(response => response.json())
+        .then(json => console.log(json));
+
+
+
+</script>
+</html>
