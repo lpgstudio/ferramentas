@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Botão Whatsapp flutuante v1 - HTML</title>
+</head>
+<body>
+    <section id="whatsapp-button">
+        <div class="whatsapp-popup-conteiner">
+            
+            <div class="pop-form"></div>
+            <div class="popup-links"></div>
+        </div>
+        <div class="button-box">
+            <div class="button-msg-box">
+                <p>We can talk here!</p>
+            </div>
+            <div class="button-whatsapp" onclick="openWhats()">
+                <button></button>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function openWhats(){
+        var whatsButton = document.querySelector('.button-whatsapp button');
+        var whatsPopup = document.querySelector('.whatsapp-popup-conteiner')
+
+        whatsButton.classList.toggle('active');
+        whatsPopup.classList.toggle('active');
+    }
+</script>
+</html>
