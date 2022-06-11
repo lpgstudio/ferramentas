@@ -13,12 +13,27 @@
 <body>
     <section id="whatsapp-button">
         <div class="whatsapp-popup-conteiner">
-            
-            <div class="pop-form"></div>
-            <div class="popup-links"></div>
+            <!-- <div class="pop-form">
+            </div> -->
+            <div class="popup-links-container">
+                <h3>Estamos esperando o seu contato!</h3>
+                <p>Escolha qual atendente você prefere...</p>
+                <bu class="popup-links-box">
+                    <button class="popup-link-itens" onclick="window.location.href='https:/\/www.google.com'" >
+                        <h3>Piracicaba</h3>
+                    </button>
+                    <button class="popup-link-itens" onclick="window.location.href='https:/\/www.google.com'" >
+                        <h3>Piracicaba</h3>
+                    </button>
+                    <button class="popup-link-itens" onclick="window.location.href='https:/\/www.google.com'" >
+                        <h3>Piracicaba</h3>
+                    </button>
+                </bu>
+            </div>
         </div>
         <div class="button-box">
             <div class="button-msg-box">
+                <span onclick="closeMsg()">X</span>
                 <p>We can talk here!</p>
             </div>
             <div class="button-whatsapp" onclick="openWhats()">
@@ -35,5 +50,10 @@
         whatsButton.classList.toggle('active');
         whatsPopup.classList.toggle('active');
     }
+    function closeMsg(){
+        var closeMsg = document.querySelector('.button-msg-box');
+        closeMsg.classList.toggle('close');
+    }
+    
 </script>
 </html>

@@ -5,7 +5,7 @@
     --button: #0D9A15;
     --button-hover: rgb(26, 133, 14);
     --white: #ffffff;
-    --shadow: 3px 4px 12px 2px rgb(0 0 0 / 50%);
+    --shadow: 3px 4px 12px 2px rgba(0, 0, 0, 0.199);
 
 }
 
@@ -55,16 +55,12 @@ section#whatsapp-button{
 .button-msg-box{
     position: relative;
     width: 100px; /*pode ser dinâmico*/
-    margin-right: 70px;
+    margin-right: 75px;
     padding: 5px 10px;
     background-color: var(--white);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    /* transform: translateX(150px); */
-    /* display: none; */
     animation: msgpopup 3s linear;
-    /* animation-delay: 1s; */
-    /* transition: 1s; */
 }
 
 .button-msg-box::after{
@@ -79,6 +75,19 @@ section#whatsapp-button{
     background-color: var(--white);
 }
 
+.button-msg-box.close{
+    display: none;
+}
+
+.button-msg-box span{
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #cccccc;
+    cursor: pointer;
+}
 
 /* button */
 .button-box button{
@@ -118,13 +127,23 @@ section#whatsapp-button{
 
 /* popup */
 
-.whatsapp-popup-conteiner{
+.whatsapp-popup-conteiner.active{
+
     position: relative;
     width: 300px;
-    height: 70vh;
-    background-color: red;
+    height: 55vh;
+    background-color: #f8f8f8;
     margin-bottom: 15px;
     border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 15px 20px;
+    transition: 0.5s;
+    visibility: visible;
+}
+.whatsapp-popup-conteiner{
+    height: 0vh;
+    width: 0px;
+    visibility: hidden;
 }
 
 .whatsapp-popup-conteiner::after{
@@ -136,5 +155,40 @@ section#whatsapp-button{
     transform: translate(-50%,50%) rotate(45deg);
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: #f8f8f8;
+}
+
+.popup-links-container h3{
+    color: #333333;
+    font-size: 16px;
+}
+.popup-links-container p{
+    color: #696969;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.popup-links-container .popup-links-box{
+    position: relative;
+    overflow-y: auto;
+}
+
+.popup-links-box .popup-link-itens{
+    height: 60px;
+    width: 100%;
+    background-color: #eeeeee;
+    border: 1px solid #b8b8b8;
+    border-left: 5px solid var(--button);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.popup-links-box .popup-link-itens:hover{
+    background-color: #d8d8d8;
+    padding-left: 18px;
+    transition: 0.5s;
 }
