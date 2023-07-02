@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --verde: #0A492C;
+    --branco: #fff;
+    --preto: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    position: relative;
+    width: 100%;
+}
+
+header .header-info{
+    position: relative;
+    width: 100%;
+    background-color: var(--verde);
+    display: flex;
+    padding: 15px 0;
+}
+
+header .container{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+header .header-info .container p{
+    color: var(--branco);
+    font-size: 12px; /*usando 15px no projeto*/
+    font-weight: 300; /*usando 600 no projeto*/
+}
+header .header-info .container p:nth-child(3){
+    margin-left: auto;
+}
+
+header .header-nav{
+    padding: 40px 0;
+}
+
+header .header-nav .container{
+    justify-content: space-between;
+}
+
+header .header-nav .container ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: start;
+    align-content: center;
+}
+header .header-nav .container ul li{
+    list-style: none;
+}
