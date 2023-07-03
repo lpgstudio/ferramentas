@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <title>Replica do site distribuidora</title>
 
@@ -44,32 +45,32 @@
                 <div>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="#" class="menu-up">
                                 > Trabalhe Conosco
                             </a>
                         </li>
                         <li>
-                            <a href="https://pedraboa.wtti.app/Login.aspx?ReturnUrl=%2f">
+                            <a href="https://pedraboa.wtti.app/Login.aspx?ReturnUrl=%2f" class="menu-up">
                                 > Portal Representante
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="menu-up">
                                 > Blog
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="menu-down">
                                 A Pedra Boa
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="menu-down">
                                 Download
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="menu-down">
                                 Contato
                             </a>
                         </li>
@@ -83,9 +84,161 @@
                 </div>
                 <a href="#" class="btn-telefone"><i class="fa-solid fa-phone"></i> Televendas</a>
             </div>
-            </div>
-
+        </div>
     </header>
+
+    <main>
+        <section id="banner-slide">
+            <div class="swiper slidePrincipal">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="assets/img/imagem-slide-01.png" alt="foto com a fachada da empresa">
+                        <h2>
+                            Mais de <br>
+                            <span>27 Anos</span><br>
+                            de História
+                        </h2>
+                        <a href="#" class="btn-banner">Conhecer</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="assets/img/imagem-slide-01.png" alt="foto com a fachada da empresa">
+                        <h2>
+                            DEMO <br>
+                            <span>DEMO</span><br>
+                            DEMO
+                        </h2>
+                        <a href="#" class="btn-banner">Conhecer</a>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="promo-cards">
+            <div class="container">
+                <div class="promo-card">
+                    <a href="#">Promoções</a>
+                </div>
+                <div class="promo-card">
+                    <a href="#">
+                        <img src="assets/img/promocao-stein-card.png" alt="">
+                    </a>
+                </div>
+                <div class="promo-card">
+                    <a href="#">
+                        <span>Historia</span><br>
+                        Pedra Boa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="promo-folhetos">
+            <div class="container">
+                <div class="promo-folheto">
+                    <a href=""><img src="assets/img/folheto-1.png" alt=""></a>
+                </div>
+                <div class="promo-folheto">
+                    <a href=""><img src="assets/img/folheto-2.png" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="banner-cta">
+            <img src="assets/img/Banner-cta.png" alt="">
+        </section>
+
+        <section id="novidades">
+            <div class="container">
+                <div class="headline">
+                    <h2>Novidades</h2>
+                    <p>Fique por dentro das nossas últimas notícias em nossos canais de comunicação.</p>
+                </div>
+
+                <div class="novidades-cards">
+                    <div class="novidades-card">1</div>
+                    <div class="novidades-card">2</div>
+                    <div class="novidades-card">3</div>
+                    <div class="novidades-card">4</div>
+                    <div class="novidades-card">5</div>
+                    <div class="novidades-card">6</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter-cta">
+            <div class="container">
+                <div class="cta-texto">
+                    <h2>Quero receber Newsletter</h2>
+                    <p>Se inscreva para receber todas as novidades.</p>
+                </div>
+                <div class="cta-form">
+                    <form action="#" method="post">
+                        <input type="text" name="newsletter-nome" id="newsletter-nome" placeholder="Nome">
+                        <input type="email" name="newsletter-email" id="newsletter-email" placeholder="E-mail">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="faca-parte">
+            <div class="container">
+                <div class="headline">
+                    <h2>Faça parte da nossa equipe</h2>
+                    <p>Gostaria de fazer parte da nossa equipe? Nos envie seu currículo.</p>
+                </div>
+
+                <div class="vaga-container">
+                    <div class="vaga-card"></div>
+                    <div class="vaga-card"></div>
+                    <div class="vaga-card"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="fotter-one">
+                <p>
+                    vendas@pedraboa.com.br <br>
+                    (47) 3467-5050
+                </p>
+                <a href="#">TEM ALGUMA DÚVIDA?</a>
+                <a href="#">CONTATO</a>
+            </div>
+            <div class="fotter-two">
+                <ul>
+                    <li><a href="">LINkS</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">LINkS 2</a></li>
+                </ul>
+                <div class="mapa">
+                    MAPA
+                </div>
+            </div>
+            <div class="fotter-tree">
+                <p>pedraboa.com.br © todos os direitos reservados 2023.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".slidePrincipal", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 
 </html>
