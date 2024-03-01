@@ -24,7 +24,7 @@ span::before{
     position: absolute;
     font-family: fontAwesome;
     color: #1ceb6b;
-    animation: moveShape 3s linear forwards;
+    animation: moveShape 1s linear forwards;
 }
 
 @keyframes moveShape {
