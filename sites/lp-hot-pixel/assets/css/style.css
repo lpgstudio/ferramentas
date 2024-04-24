@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color: #13293d;
+    --second-color: #006494;
+    --background-color: #f2f2f2;
+    
+    --btn-cta-color-one: #009929;
+
+    --icons-options-bar-color: #fff;
+    --text-color: #333;
+
+    --title-size: 32px;
+    --text-size: 18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.container{
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botão transparente */
+.cta-info{
+    border: 2px solid var(--btn-cta-color-one);
+    border-radius: 3px;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 20px;
+    transition: 0.3s ease-in-out;
+}
+.cta-info:hover span i{
+    transform: translate(-7px ,0 ) scale(1.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* Botão CTA */
+.cta-sell{
+    border-radius: 3px;
+    border: 2px solid var(--btn-cta-color-one);
+    background-color: var(--btn-cta-color-one);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 20px;
+    transition: 0.3s ease-in-out;
+}
+.cta-sell:hover{
+    border: 2px solid #05b133;
+    background-color: #05b133;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Header */
+
+header{
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.options-bar{
+    width: 100%;
+    border-bottom: 2px solid var(--btn-cta-color-one);
+    padding: 10px 0;
+}
+.options-bar .container{
+    justify-content: end;
+    gap: 15px;
+}
+.options-bar .container a{
+    color: var(--icons-options-bar-color);
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+.options-bar .container a:hover{
+    color: var(--btn-cta-color-one);
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+}
+.nav-bar{
+    padding: 15px 0;
+}
+
+.nav-bar .container nav{
+    margin-left: auto;
+    margin-right: 50px;
+}
+.nav-bar .container .logo{
+    position: relative;
+    width: 170px;
+    height: 40px;
+}
+.nav-bar .container .logo img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.nav-bar .container nav ul{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar .container nav ul li a{
+    color: var(--icons-options-bar-color);
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    padding-bottom: 20px;
+}
+
+.nav-bar .container nav ul li a:hover{
+    border-bottom: 7px solid var(--btn-cta-color-one);
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar .container .btn-register{
+    background-color: var(--btn-cta-color-one);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 7px 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar .container .btn-register:hover{
+    background-color: #05b133;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Main Banner Principal */
+#banner{
+    position: relative;
+    padding: 70px 0;
+}
+
+#banner .container .content h1{
+    color: var(--primary-color);
+    font-size: var(--title-size);
+    font-weight: 700;
+}
+
+#banner .container .content p{
+    color: var(--text-color);
+    font-size: var(--text-size);
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+#banner .container .btn-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
